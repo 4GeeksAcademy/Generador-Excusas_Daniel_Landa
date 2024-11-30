@@ -1,1 +1,29 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: rgb(39, 38, 39);
+}
+
+h1 {
+  color: white;
+}
+
+.mt-5 {
+  color: rgb(255, 255, 255);
+}
+
+.excuse {
+  color: rgb(255, 255, 255);
+}
+
+#botón {
+  color: aliceblue;
+  background-color: rgb(67, 190, 104);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.7rem;
+  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 20px;
+  border-radius: 30px;
+}
