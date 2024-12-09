@@ -18,12 +18,28 @@ h1 {
 
 #botón {
   color: aliceblue;
-  background-color: rgb(67, 190, 104);
+  background-color: rgb(32, 212, 224);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.7rem;
   padding: 20px;
   padding-left: 50px;
   padding-right: 50px;
   margin-top: 20px;
+  margin-bottom: 30px;
   border-radius: 30px;
+}
+hr {
+  color: rgb(32, 212, 224);
+  padding: 3px;
+}
+.footer {
+  color: white;
+  background-color: rgb(32, 212, 224);
+}
+.footer p {
+  margin: 0;
+}
+.footer a {
+  text-decoration: none;
+  color: red;
 }

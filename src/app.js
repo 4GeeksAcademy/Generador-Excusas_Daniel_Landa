@@ -19,19 +19,28 @@ window.onload = () => {
 //Genero cada matriz con los valores que quiero en cada categoría...
 let generateExcuses = () => {
   let articulo = ["El", "Mi"];
-  let quien = ["canario", "abuelo", "gato", "vecino", "jefe", "hermano"];
+  let quien = ["gato", "Tía", "perro", "vecino", "amigo", "hermano"];
   let accion = [
     "se comió mi",
     "ha robado mi",
     "destruyó mi",
-    "ha secuestrado mi"
+    "ha secuestrado mi",
+    "ha usado mi"
   ];
-  let que = ["proyecto de JavaScript", "llavero", "coche", "portátil"];
+  let que = [
+    "proyecto de JavaScript",
+    "llavero",
+    "coche",
+    "portátil",
+    "movil",
+    "taza"
+  ];
   let como = [
     "mientras dormía!",
     "mientras estaba cenando!",
     "cuando yo no miraba!",
-    "mientras estaba en el trabajo!"
+    "mientras estaba en el trabajo!",
+    "mientras no estaba en casa"
   ];
 
   //Me devuelve una palabra aleatoria generando un numero random de minimo 0 y como máximo la longitud de mi matriz...
