@@ -1,45 +1,109 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+/* Aquí ajustes mas generales de la página*/
+
 body {
-  background-color: rgb(39, 38, 39);
+  margin-top: 270px;
+  height: 100vh;
+  background-color: rgb(255, 254, 207);
+}
+.caja:hover {
+  box-shadow: 0px 0px 5px black;
+}
+.caja {
+  margin: 0 auto;
+  width: 500px;
+  height: auto;
+  border-radius: 15px;
+  transition: box-shadow 0.3s ease;
 }
 
-h1 {
-  color: white;
+/*Aquí se encuentra las modificaciones del header de la página*/
+
+.caja-header {
+  background-color: rgb(115, 146, 17);
+  border-radius: 15px;
+  box-shadow: 3px 5px 5px black;
+  text-shadow: 3px 5px 7px black;
+  align-items: center;
+  height: 100px;
+  display: flex;
+}
+.caja-header h1 {
+  width: 450px;
+  font-size: 45px;
+}
+.caja-header img {
+  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.651);
+  width: 50px;
+  height: 50px;
 }
 
-.mt-5 {
-  color: rgb(255, 255, 255);
-}
+/*Aqui se encuentran las modificaciones del Main de la Página*/
 
-.excuse {
-  color: rgb(255, 255, 255);
+.caja-main {
+  display: flex;
+  flex-direction: column;
 }
-
-#botón {
-  color: aliceblue;
-  background-color: rgb(32, 212, 224);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.7rem;
-  padding: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
+.caja-main #agradecimiento {
+  background-color: rgb(115, 146, 17);
+  box-shadow: 3px 5px 5px black;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0 auto;
   margin-top: 20px;
-  margin-bottom: 30px;
-  border-radius: 30px;
+  width: 250px;
 }
-hr {
-  color: rgb(32, 212, 224);
-  padding: 3px;
+.caja-main #agradecimiento:hover {
+  cursor: default;
 }
-.footer {
-  color: white;
-  background-color: rgb(32, 212, 224);
+.caja-main #excusa {
+  text-shadow: 3px 3px 5px rgb(4, 110, 0);
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
 }
-.footer p {
+.caja-main button {
+  background-color: rgb(115, 146, 17);
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.caja-main button:hover {
+  background-color: orange;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/*Aqui se encuentran las modificaciones del Pie de Página*/
+
+.caja-footer {
+  background-color: rgb(115, 146, 17);
+  border-radius: 15px;
+  box-shadow: 0 -5px 3px rgba(0, 0, 0, 0.651);
+  align-items: center;
+  height: 74px;
+  display: flex;
+  /* margin-top: 133px; */
+}
+.caja-footer h3 {
+  text-shadow: 3px 3px 5px black;
+  width: 385px;
+  font-size: 27px;
+}
+.caja-footer nav {
+  width: 110px;
+  height: auto;
+}
+.caja-footer a {
   margin: 0;
-}
-.footer a {
+  padding: 0;
   text-decoration: none;
-  color: red;
+  color: rgb(255, 250, 179);
+}
+a:hover {
+  color: orange;
 }

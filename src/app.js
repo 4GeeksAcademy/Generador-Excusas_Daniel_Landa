@@ -4,61 +4,48 @@ import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
+import "./assets/icon.png";
 
 window.onload = () => {
-  //write your code here
-
-  //Llamo a los elementos por su "id" HTML para que interactuen con el JS...
-  document.querySelector("#botón").addEventListener("click", () => {
-    document.querySelector("#excuse").innerHTML = generateExcuses();
-  });
-
-  console.log("Hello Rigo from the console!");
+  document.querySelector("#excusa").innerHTML = generadorExcusa();
 };
 
-//Genero cada matriz con los valores que quiero en cada categoría...
-let generateExcuses = () => {
-  let articulo = ["El", "Mi"];
-  let quien = ["gato", "Tía", "perro", "vecino", "amigo", "hermano"];
-  let accion = [
-    "se comió mi",
-    "ha robado mi",
-    "destruyó mi",
-    "ha secuestrado mi",
-    "ha usado mi"
-  ];
-  let que = [
-    "proyecto de JavaScript",
-    "llavero",
-    "coche",
-    "portátil",
-    "movil",
-    "taza"
-  ];
+let generadorExcusa = () => {
+  let artic = ["El", "Mi"];
+  let quien = ["Tía", "Tio", "gato", "abuela"];
+  let accion = ["me rompio mi", "me cogió mi", "me robo mi", "escondio"];
+  let cosa = ["movil", "portátil", "llaves", "bocina"];
   let como = [
-    "mientras dormía!",
-    "mientras estaba cenando!",
-    "cuando yo no miraba!",
-    "mientras estaba en el trabajo!",
-    "mientras no estaba en casa"
+    "mientras dormía",
+    "mientas estudiaba",
+    "cuando no estaba en casa",
+    "cuando no miraba",
+    "cuando entre al baño",
+    "cuando me fui de fiesta"
   ];
 
-  //Me devuelve una palabra aleatoria generando un numero random de minimo 0 y como máximo la longitud de mi matriz...
-  let numArticulo = Math.floor(Math.random() * articulo.length);
+  /* Ahora tengo que seleccionar un elemento de cada lista para utilizarlos luego al generar mi excusa */
+
+  let numArtic = Math.floor(Math.random() * artic.length);
   let numQuien = Math.floor(Math.random() * quien.length);
   let numAccion = Math.floor(Math.random() * accion.length);
-  let numQue = Math.floor(Math.random() * que.length);
+  let numCosa = Math.floor(Math.random() * cosa.length);
   let numComo = Math.floor(Math.random() * como.length);
 
-  //Me devuelve mi excusa completa al crear la funcion return concatenando los resultados de cada generacion random de las matrices del paso anterior...
+  if (numArtic == 0) {
+    if (numQuien == 0 || numQuien == 3) {
+      numArtic = 1;
+    }
+  }
+  /* Me devuelve mi excusa ya anidada */
   return (
-    articulo[numArticulo] +
+    artic[numArtic] +
     " " +
     quien[numQuien] +
     " " +
     accion[numAccion] +
     " " +
-    que[numQue] +
+    cosa[numCosa] +
     " " +
     como[numComo]
   );

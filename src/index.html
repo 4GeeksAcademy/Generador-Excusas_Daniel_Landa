@@ -11,28 +11,38 @@
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
-    <link rel="icon" type="image/x-icon" href="./assets/img/4geeks.ico" />
+    <link
+      rel="shortcut icon"
+      href="https://i.ibb.co/7Jk0dXb/icon.png"
+      type="image/x-icon"
+    />
+    <!-- <link rel="icon" type="image/x-icon" href="./assets/img/4geeks.ico" /> -->
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <!--Texto por defecto antes de la excusa-->
-      <h1 class="mt-5">¡No te lo vas a creer, pero...</h1>
-      <hr />
-
-      <!--Espacio para mi excusa aleatoria-->
-      <h1 id="excuse"></h1>
-
-      <!--Este es el botón que llamará la accion de generar excusa random al hacer click en él-->
-      <button id="botón">Genera tu excusa aquí</button>
-
-      <div class="footer">
-        <p>Made with ❤️ by Daniel Landa</p>
-        <br />
+    <div class="caja">
+      <!-- Mantiene el codigo dentro de una caja -->
+      <div class="caja-header">
+        <!-- Contiene el codigo del header en una caja -->
+        <h1>Generador de excusas</h1>
+        <img src="https://i.ibb.co/7Jk0dXb/icon.png" alt="engranajes" />
+      </div>
+      <div class="caja-main">
+        <!-- Contiene el codigo del main en una caja -->
+        <p id="agradecimiento">
+          Este es mi tercer proyecto de 4Geek Academy en el Prework espero que
+          les guste.😁 )
+        </p>
+        <p id="excusa"></p>
+      </div>
+      <div class="caja-footer">
+        <!-- Contiene el codigo del footer en una caja -->
+        <h3>Creado con ❤️ por Z320-C0_01</h3>
         <nav>
-          <a href="https://www.4geeksacademy.com">4Geeks Academy</a><br />
+          <a href="https://4geeks.com/es/login">4GeekAcademy</a><br /><br />
           <a href="mailto:landadlh603@gmail.com">Contáctame</a>
         </nav>
       </div>
     </div>
+    <script src="./app.js"></script>
   </body>
 </html>
