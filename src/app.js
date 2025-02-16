@@ -1,14 +1,3 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
-
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-import "./assets/icon.png";
-
-window.onload = () => {
-  document.querySelector("#excusa").innerHTML = generadorExcusa();
-};
 
 let generadorExcusa = () => {
   let artic = ["El", "Mi"];
@@ -25,28 +14,19 @@ let generadorExcusa = () => {
   ];
 
   /* Ahora tengo que seleccionar un elemento de cada lista para utilizarlos luego al generar mi excusa */
+  let getRandomNum = (arr) => {return Math.floor(Math.random() * arr.length)};
+  
+  let numArtic = getRandomNum(artic);
+  let numQuien = getRandomNum(quien);
+  let numAccion = getRandomNum(accion);
+  let numCosa = getRandomNum(cosa);
+  let numComo = getRandomNum(como);
 
-  let numArtic = Math.floor(Math.random() * artic.length);
-  let numQuien = Math.floor(Math.random() * quien.length);
-  let numAccion = Math.floor(Math.random() * accion.length);
-  let numCosa = Math.floor(Math.random() * cosa.length);
-  let numComo = Math.floor(Math.random() * como.length);
-
-  if (numArtic == 0) {
-    if (numQuien == 0 || numQuien == 3) {
+  if (numArtic === 0) {
+    if (numQuien === 0 || numQuien === 3) {
       numArtic = 1;
     }
   }
-  /* Me devuelve mi excusa ya anidada */
-  return (
-    artic[numArtic] +
-    " " +
-    quien[numQuien] +
-    " " +
-    accion[numAccion] +
-    " " +
-    cosa[numCosa] +
-    " " +
-    como[numComo]
-  );
+
+  document.querySelector('#excusa').innerText = `${artic[numArtic]} ${quien[numQuien]} ${accion[numAccion]} ${cosa[numCosa]} ${como[numComo]}`;
 };
